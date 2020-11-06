@@ -4,15 +4,15 @@ function [Flexibility,Allegiance,Volatility,Transition,Quatity,Iterations,Corr_M
 % Date: 2020/4/28
 % Copyright (C) 2020-2021 zhishui All Rights Reserved
 % Input
-%       Timematrix:ROI Timeseries matrix(row*column), row:timepoints, column:ROIs¡£
+%       Timematrix:ROI Timeseries matrix(row*column), row:timepoints, column:ROIsï¿½ï¿½
 %       Winlen:Window length(tr)
 %       Step:step
 % Optional varargin:
 %       Cotype: choose 'wavlvelet coherence' or' Pearson correlation
 % coefficient' to construct the functional connectivity network,
 % 0:wavlvelet coherence ,1:Pearson correlation defautl:1
-%       Omega:Parameter of  GenLouvain algorithm£¬default:1
-%       Gamma: Parameter of  GenLouvain algorithm£¬default:1
+%       Omega:Parameter of  GenLouvain algorithmï¿½ï¿½default:1
+%       Gamma: Parameter of  GenLouvain algorithmï¿½ï¿½default:1
 %       deterministic ,To force deterministic behavior,1:deterministic,0:random,default:1
 %       FDR:perform flase discovery rate correction to correlation matrix.
 %       Threshold: Threshold of the correlation matrix (default:0)
@@ -21,9 +21,9 @@ function [Flexibility,Allegiance,Volatility,Transition,Quatity,Iterations,Corr_M
 % Example:
 % [Flexibility,Allegiance,Volatility,Transition,Quatity,Iterations] = Multilayer_Flexibility(Timematrix,50,50,'itertimes',1,'FDR',1);
 %the multilayer community detection algorithm requires the selection
-% of two different parameters¡ª¦Ø and ¦Ã¡ªthat tune the resolution
-% of the community structure (¦Ã) and the strength of interlayer
-% coupling (¦Ø). As a standard and in absence of an a priori hypothesis,
+% of two different parametersï¿½ï¿½ï¿½ï¿½ and ï¿½Ã¡ï¿½that tune the resolution
+% of the community structure (ï¿½ï¿½) and the strength of interlayer
+% coupling (ï¿½ï¿½). As a standard and in absence of an a priori hypothesis,
 % those parameters are normally set to 1.
 % Algorithm II to perform iterated_genlouvain 
 %     N=length(A{1});
@@ -39,7 +39,7 @@ function [Flexibility,Allegiance,Volatility,Transition,Quatity,Iterations,Corr_M
 %     %
 %     Quatity(iter,1)=Q;
 %     Transition{iter,1}=S;
-
+ 
 % When using the multilayer quality function in Mucha et al. 2010, 
 % we recommend using iterated_genlouvain with 'moverandw' and the appropriate post-processing function 
 % (i.e., postprocess_ordinal_multilayer for an ordered multilayer network 
